@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace TryDotNet_FirstSteps
 {
@@ -14,6 +15,9 @@ namespace TryDotNet_FirstSteps
                     break;
                 case "JsonExample":
                     JsonExample();
+                    break;
+                case "SerilogExample":
+                    SerilogExample();
                     break;
             }
         }
@@ -34,6 +38,18 @@ namespace TryDotNet_FirstSteps
 
             Console.WriteLine(json);
             #endregion JsonExample
+        }
+
+        static void SerilogExample()
+        {
+            #region SerilogExample
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .CreateLogger();
+
+            Log.Information("Ah, there you are!");
+
+            #endregion SerilogExample
         }
     }
 }

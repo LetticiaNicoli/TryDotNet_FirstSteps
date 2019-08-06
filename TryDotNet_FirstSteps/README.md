@@ -4,12 +4,20 @@
 
 ### Imprimindo valor
 
-``` cs --region FollowMeExample --source-file .\Program.cs --project .\TryDotNet-FirstSteps.csproj 
+``` cs --region FollowMeExample --source-file .\Program.cs --project .\TryDotNet_FirstSteps.csproj 
 
 ```
 
 ### Utilizando pacotes
 
-``` cs --region JsonExample --source-file .\Program.cs --project .\TryDotNet-FirstSteps.csproj 
+*Newtonsoft.Json*
+
+``` cs --region JsonExample --source-file .\Program.cs --project .\TryDotNet_FirstSteps.csproj 
+
+```
+
+*Serilog*
+
+``` cs --region SerilogExample --source-file .\Program.cs --project .\TryDotNet_FirstSteps.csproj 
 
 ```
