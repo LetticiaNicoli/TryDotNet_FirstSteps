@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Newtonsoft.Json;
 using Serilog;
 
@@ -8,6 +9,12 @@ namespace TryDotNet_FirstSteps
     {
         static void Main(string[] args)
         {
+            if (!args.Any())
+            {
+                Console.WriteLine("Please inform one of these arguments: FollowMeExample JsonExample SerilogExample");
+                return;
+            }
+
             switch (args[1])
             {
                 case "FollowMeExample":
